@@ -224,6 +224,8 @@ jobs:
           EOF
 
       - name: Build
+        env:
+          MOONFIN_TEST_ID_SUFFIX: .test
         run: |
           chmod +x build-android.sh
           ./build-android.sh
